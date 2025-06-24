@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #fail jobs
-repo sync -j1 --fail-fast
+#repo sync -j1 --fail-fast
 
 
 # repo init rom
