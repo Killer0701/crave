@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#fail jobs
+repo sync -j1 --fail-fast
+
+
 # repo init rom
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 echo "=================="
@@ -32,5 +36,5 @@ lunch infinity_haydn-userdebug
 echo "============="
 # Build
 echo "============="
-mka bacon
+mka make clean && mka bacon
 echo "============="
