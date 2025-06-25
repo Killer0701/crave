@@ -5,7 +5,7 @@
 
 
 # repo init rom
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -17,7 +17,7 @@ echo "Sync success"
 echo "============="
 
 # Sync Trees
-git clone https://github.com/Killer0701/device_xiaomi_haydn -b Inf-15 device/xiaomi/haydn
+git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn.git -b lineage-22.2 device/xiaomi/haydn
 
 # Set up build environment
 . build/envsetup.sh
@@ -25,10 +25,7 @@ echo "============="
 
 #sign rom
 echo "============="
-croot && git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys
-cd vendor/infinity-priv/keys
-./keys.sh
-cd ../../..
+
 echo "============="
 # Lunch
 echo "============="
@@ -36,5 +33,5 @@ lunch infinity_haydn-userdebug
 echo "============="
 # Build
 echo "============="
-mka make clean && mka bacon
+mka bacon
 echo "============="
