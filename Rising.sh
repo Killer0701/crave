@@ -19,17 +19,20 @@ echo "============="
 # Sync Trees
 git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn.git -b lineage-22.2 device/xiaomi/haydn
 
+
+#sign 
+gk -s 
+echo "============="
+
+echo "============="
+
 # Set up build environment
 . build/envsetup.sh
 echo "============="
 
-#sign rom
-echo "============="
-
-echo "============="
 # Lunch
 echo "============="
-lunch infinity_haydn-userdebug
+riseup lineage_haydn-userdebug
 echo "============="
 # Build
 echo "============="
