@@ -20,19 +20,19 @@ echo "============="
 git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn.git -b lineage-22.2 device/xiaomi/haydn
 
 
-#sign 
-gk -s 
-echo "============="
-
-echo "============="
-
 # Set up build environment
 . build/envsetup.sh
 echo "============="
 
+#sign 
+gk -s 
+
+echo "============="
+
+echo "============="
 # Lunch
 echo "============="
-riseup lineage_haydn-userdebug
+riseup haydn userdebug
 echo "============="
 # Build
 echo "============="
