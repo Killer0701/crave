@@ -37,7 +37,7 @@ echo "============="
 echo "sign successful"
 echo "============="
 # Lunch
-lunch lineage_haydn-bp1a-userdebug
+lunch lineage_haydn-bp1a-user
 echo "============="
 echo "seggs done"
 echo "============="
