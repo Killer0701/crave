@@ -31,25 +31,11 @@ echo "seggs"
 echo "============="
 
 #sign 
-mkdir -p vendor/lineage-priv/keys
-
-openssl genrsa -out releasekey.pk8 2048
-openssl req -new -x509 -key releasekey.pk8 -out releasekey.x509.pem -days 10000 -subj "/CN=ROM Release/O=MyROM/C=US"
-
-openssl genrsa -out platform.pk8 2048
-openssl req -new -x509 -key platform.pk8 -out platform.x509.pem -days 10000 -subj "/CN=Platform/O=MyROM/C=US"
-
-openssl genrsa -out shared.pk8 2048
-openssl req -new -x509 -key shared.pk8 -out shared.x509.pem -days 10000 -subj "/CN=Shared/O=MyROM/C=US"
-
-openssl genrsa -out media.pk8 2048
-openssl req -new -x509 -key media.pk8 -out media.x509.pem -days 10000 -subj "/CN=Media/O=MyROM/C=US"
-
-cd /tmp/src/android
-
+curl -sSf https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script-auto/main/create-signed-env.sh | bash
 echo "============="
-echo "sign successful"
+echo "sign success"
 echo "============="
+
 # Lunch
 lunch lineage_haydn-bp1a-user
 echo "============="
