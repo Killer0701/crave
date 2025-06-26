@@ -24,17 +24,25 @@ git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn.git -b lin
 . build/envsetup.sh
 echo "============="
 
+# vendorset.sh delete
+rm -rf device/xiaomi/haydn/vendorsetup.sh
+echo "============="
+echo "seggs"
+echo "============="
+
 #sign 
 gk -s 
 
 echo "============="
-
+echo "sign successful"
 echo "============="
 # Lunch
-echo "============="
 riseup haydn userdebug
 echo "============="
-# Build
+echo "seggs done"
 echo "============="
+# Build
 mka bacon
+echo "============="
+echo "Rom built"
 echo "============="
