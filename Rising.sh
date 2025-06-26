@@ -5,7 +5,7 @@
 
 
 # repo init rom
-repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs
+repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -17,7 +17,7 @@ echo "Sync success"
 echo "============="
 
 # Sync Trees
-git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn.git -b lineage-22.2 device/xiaomi/haydn
+git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn -b derpfest device/xiaomi/haydn
 
 
 # Set up build environment
@@ -31,18 +31,18 @@ echo "seggs"
 echo "============="
 
 #sign 
-gk -s 
+
 
 echo "============="
 echo "sign successful"
 echo "============="
 # Lunch
-riseup haydn userdebug
+lunch lineage_haydn-bp1a-userdebug
 echo "============="
 echo "seggs done"
 echo "============="
 # Build
-mka bacon
+mka derp
 echo "============="
 echo "Rom built"
 echo "============="
