@@ -2,7 +2,8 @@
 
 #fail jobs
 #repo sync -j1 --fail-fast
-
+git config --global user.name "NotWorthy01"
+git config --global user.email "fkjfjf@gmail.com"
 
 # repo init rom
 repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
@@ -11,7 +12,7 @@ echo "Repo init success"
 echo "=================="
 
 # Build Sync
-/opt/crave/resync.sh 
+repo sync
 echo "============="
 echo "Sync success"
 echo "============="
