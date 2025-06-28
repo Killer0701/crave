@@ -5,6 +5,8 @@
 git config --global user.name "NotWorthy01"
 git config --global user.email "fkjfjf@gmail.com"
 
+#linux-x86 remove 
+rm -rf prebuilts/clang/host/linux-x86
 # repo init rom
 repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
 echo "=================="
@@ -12,7 +14,7 @@ echo "Repo init success"
 echo "=================="
 
 # Build Sync
-repo sync
+/opt/crave/resync.sh
 echo "============="
 echo "Sync success"
 echo "============="
