@@ -1,14 +1,11 @@
-#!/bin/bash
-
-#fail jobs
-#repo sync -j1 --fail-fast
+#acckunta
 git config --global user.name "NotWorthy01"
 git config --global user.email "fkjfjf@gmail.com"
 
 #linux-x86 remove 
 rm -rf prebuilts/clang/host/linux-x86
 # repo init rom
-repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
+repo init -u https://github.com/GenesisOS/manifest.git -b verve-qpr2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -30,22 +27,25 @@ echo "============="
 # vendorset.sh delete
 rm -rf device/xiaomi/haydn/vendorsetup.sh
 echo "============="
-echo "seggs"
+echo "Vendorsetup.sh delete"
 echo "============="
 
 #sign 
-curl -sSf https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script-auto/main/create-signed-env.sh | bash
+subject='/C=US/ST=State/L=City/O=Android/OU=Android/CN=Android/emailAddress=email@example.com'
+for x in releasekey platform shared media networkstack verity otakey testkey sdk_sandbox bluetooth nfc; do \
+    ./development/tools/make_key vendor/genesis/signing/keys/$x "$subject"; \
+done
 echo "============="
 echo "sign success"
 echo "============="
 
 # Lunch
-lunch lineage_haydn-bp1a-user
+breakfast haydn
 echo "============="
-echo "seggs done"
+echo "lunch done"
 echo "============="
 # Build
-mka derp
+mka genesis
 echo "============="
 echo "Rom built"
 echo "============="
