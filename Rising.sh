@@ -32,6 +32,7 @@ echo "Vendorsetup.sh delete"
 echo "============="
 
 #sign 
+gk -f
 echo "============="
 echo "sign success"
 echo "============="
