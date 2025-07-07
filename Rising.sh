@@ -4,8 +4,9 @@ git config --global user.email "fkjfjf@gmail.com"
 
 #linux-x86 remove 
 rm -rf prebuilts/clang/host/linux-x86
+
 # repo init rom
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/Project-Mist-OS/manifest -b vic --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -36,12 +37,12 @@ echo "sign success"
 echo "============="
 
 # Lunch
-lunch lineage_haydn-userdebug
+mistify haydn user
 echo "============="
 echo "lunch done"
 echo "============="
 # Build
-mka bacon
+mist sb
 echo "============="
 echo "Rom built"
 echo "============="
