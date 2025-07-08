@@ -32,7 +32,7 @@ echo "Vendorsetup.sh delete"
 echo "============="
 
 #sign 
-gk -f
+curl -sSf https://raw.githubusercontent.com/Trijal08/crDroid-build-signed-script-auto/main/create-signed-env.sh | bash
 echo "============="
 echo "sign success"
 echo "============="
