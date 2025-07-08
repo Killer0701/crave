@@ -43,7 +43,7 @@ echo "============="
 echo "lunch done"
 echo "============="
 # Build
-mist sb
+mist b
 echo "============="
 echo "Rom built"
 echo "============="
