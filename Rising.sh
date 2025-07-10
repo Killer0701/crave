@@ -6,7 +6,7 @@ git config --global user.email "fkjfjf@gmail.com"
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/Project-Mist-OS/manifest -b vic --git-lfs
+repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -38,12 +38,12 @@ echo "sign success"
 echo "============="
 
 # Lunch
-mistify haydn user
+riseup haydn userdebug
 echo "============="
 echo "lunch done"
 echo "============="
 # Build
-mist b
+rise sb
 echo "============="
 echo "Rom built"
 echo "============="
