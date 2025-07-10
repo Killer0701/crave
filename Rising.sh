@@ -43,7 +43,7 @@ echo "============="
 echo "lunch done"
 echo "============="
 # Build
-rise sb
+rise b
 echo "============="
 echo "Rom built"
 echo "============="
