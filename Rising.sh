@@ -6,7 +6,7 @@ git config --global user.email "fkjfjf@gmail.com"
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs
+repo init -u https://github.com/Project-Mist-OS/manifest.git -b 16 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -18,8 +18,7 @@ echo "Sync success"
 echo "============="
 
 # Sync Trees
-git clone --depth=1 https://github.com/Killer0701/device-xiaomi-haydn -b lineage-22.2 device/xiaomi/haydn
-
+git clone --depth=1 https://github.com/Killer0701/device_xiaomi_haydn -b 16 device/xiaomi/haydn
 
 # Set up build environment
 . build/envsetup.sh
@@ -38,12 +37,13 @@ echo "sign success"
 echo "============="
 
 # Lunch
-riseup haydn userdebug
+mistify haydn userdebug
 echo "============="
 echo "lunch done"
 echo "============="
+
 # Build
-rise b
+mist b 
 echo "============="
 echo "Rom built"
 echo "============="
