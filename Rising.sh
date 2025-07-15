@@ -36,6 +36,9 @@ echo "============="
 echo "sign success"
 echo "============="
 
+#commit 
+cd device/xiaomi/sm8350-common && git fetch https://github.com/Haydn-Lab/device_xiaomi_sm8350-common Inf && git cherry-pick c664daf6ffb1a83fe5860dba21b6ed58b80c5aab
+
 # Lunch
 mistify haydn userdebug
 echo "============="
