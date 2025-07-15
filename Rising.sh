@@ -6,7 +6,7 @@ git config --global user.email "fkjfjf@gmail.com"
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs
+repo init -u https://github.com/Project-Mist-OS/manifest.git -b 16 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -40,13 +40,13 @@ echo "============="
 #cd device/xiaomi/sm8350-common && git fetch https://github.com/Haydn-Lab/device_xiaomi_sm8350-common Inf && git cherry-pick c664daf6ffb1a83fe5860dba21b6ed58b80c5aab
 #cd ../../..
 # Lunch
-brunch haydn
+mistify haydn userdebug
 echo "============="
 echo "lunch done"
 echo "============="
 
 # Build
-mka bacon
+mist b
 echo "============="
 echo "Rom built"
 echo "============="
