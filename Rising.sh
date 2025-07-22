@@ -6,7 +6,7 @@ git config --global user.email "fkjfjf@gmail.com"
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom sync
-repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -36,17 +36,15 @@ echo "============="
 echo "sign success"
 echo "============="
 
-#commit 
-#cd device/xiaomi/sm8350-common && git fetch https://github.com/Haydn-Lab/device_xiaomi_sm8350-common Inf && git cherry-pick c664daf6ffb1a83fe5860dba21b6ed58b80c5aab
-#cd ../../..
+
 # Lunch
-brunch haydn
+lunch lineage_haydn-userdebug
 echo "============="
 echo "lunch done"
 echo "============="
 
 # Build
-#mka bacon
+mka bacon
 echo "============="
 echo "Rom built"
 echo "============="
