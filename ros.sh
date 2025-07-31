@@ -1,3 +1,5 @@
+rm device/xiaomi/haydn/vendorsetup.sh
+
 . b*/e*
 
 gk -s
